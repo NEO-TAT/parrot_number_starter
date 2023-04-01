@@ -1,13 +1,13 @@
-name: CI
+name: analysis
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main, master ]
   pull_request:
 
 jobs:
-  analysis:
-    name: analysis
+  check:
+    name: check-code
     runs-on: ${{ matrix.os }}
 
     strategy:
